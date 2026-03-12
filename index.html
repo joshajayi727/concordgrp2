@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ConcordGrp2 — Starter Edition</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Header ─────────────────────────────── -->
+  <header>
+    <h1 class="logo-title">Concord<span>Grp2</span></h1>
+    <p class="logo-subtitle">Starter Edition &nbsp;·&nbsp; Reaction Timer</p>
+  </header>
+
+  <div class="scanline-divider"></div>
+
+  <!-- ── Game Container ────────────────────── -->
+  <main id="game-container">
+
+    <!-- Nickname Input -->
+    <div class="input-group">
+      <label class="input-label" for="nickname">▶ Callsign</label>
+      <input
+        id="nickname"
+        type="text"
+        maxlength="12"
+        placeholder="Enter your name..."
+        autocomplete="off"
+        spellcheck="false"
+      />
+    </div>
+
+    <!-- Game Arena -->
+    <div id="game-arena">
+      <p id="message">Enter your callsign and press START</p>
+      <div id="countdown-display"></div>
+      <div id="score-display"></div>
+      <span id="rating-badge"></span>
+      <button id="click-btn" class="btn">⚡ CLICK!</button>
+    </div>
+
+    <!-- Stats Row -->
+    <div id="stats-row">
+      <div class="stat-card">
+        <span class="stat-value" id="stat-best">---</span>
+        <span class="stat-label">Best</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value" id="stat-avg">---</span>
+        <span class="stat-label">Avg</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value" id="stat-plays">0</span>
+        <span class="stat-label">Plays</span>
+      </div>
+    </div>
+
+    <!-- Start Button -->
+    <button id="start-btn" class="btn">▶ &nbsp;START GAME</button>
+
+  </main>
+
+  <!-- ── Leaderboard ────────────────────────── -->
+  <section id="leaderboard-section">
+    <h2 class="section-title">🏆 &nbsp;Leaderboard</h2>
+    <ul id="score-list">
+      <p class="leaderboard-empty">NO SCORES YET — BE THE FIRST!</p>
+    </ul>
+  </section>
+
+  <!-- ── Footer ────────────────────────────── -->
+  <footer>
+    <p>ConcordGrp2 Starter Edition &nbsp;·&nbsp; Hosted on AWS S3 + CloudFront</p>
+  </footer>
+
+  <script src="game.js"></script>
+</body>
+</html>
