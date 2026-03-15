@@ -14,9 +14,6 @@
 
 ```
 https://dscevtv8kkn9d.cloudfront.net/
-```
-
-> Replace with your actual CloudFront distribution URL after deployment.
 
 ---
 
