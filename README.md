@@ -140,7 +140,7 @@ The project files were manually uploaded to the GitHub repository **concordgrp2*
 ### Step 2 — Create an S3 Bucket
 
 1. Go to **AWS Console → S3 → Create Bucket**
-2. Name: `concordgrp2` (or unique variant)
+2. Name: `concordgrp2` 
 3. Uncheck **"Block all public access"** and acknowledge the warning
 4. Enable **Static Website Hosting** under the Properties tab
 5. Set **Index document** to `index.html`
@@ -155,7 +155,7 @@ The project files were manually uploaded to the GitHub repository **concordgrp2*
       "Effect": "Allow",
       "Principal": "*",
       "Action": "s3:GetObject",
-      "Resource": "arn:aws:s3:::YOUR_BUCKET_NAME/*"
+      "Resource": "arn:aws:s3:::concordgrp2/*"
     }
   ]
 }
@@ -167,24 +167,24 @@ The project files were manually uploaded to the GitHub repository **concordgrp2*
 
 ### Step 3 — Create a CloudFront Distribution
 
-1. Go to **CloudFront → Create Distribution**
-2. **Origin domain** — select your S3 bucket from the dropdown
+1. Go to **CloudFront → Create Distribution** concordgrp2
+2. **Origin domain** — we selected our S3 bucket from the dropdown
 3. **Viewer Protocol Policy** → `Redirect HTTP to HTTPS`
 4. **Default root object** → `index.html`
 5. **SSL Certificate** → Use the **default CloudFront certificate** (`*.cloudfront.net`) — no ACM setup required
-6. Click **Create Distribution**
-7. Wait **10–15 minutes** for status: **Deployed ✅**
-8. Copy the **Distribution Domain Name** — this is your live HTTPS URL
+6. We clicked **Create Distribution**
+7. We waited **10–15 minutes** for status: **Deployed ✅**
+8. Copied the **Distribution Domain Name** — this is our live HTTPS URL https://dscevtv8kkn9d.cloudfront.net/
 
 ---
 
 ### Step 4 — Enable CloudWatch Logging
 
-1. Open your CloudFront distribution → **Edit**
-2. Under **Standard logging**, enable it
-3. Choose or create a dedicated S3 logging bucket named `concordgrp2studio
+1. we Opened our CloudFront distribution → **Edit**
+2. Under **Standard logging**, we enabled it
+3. we created a dedicated S3 logging bucket named `concordgrp2studio
 4. Save changes
-5. View metrics: **CloudWatch → Metrics → CloudFront**
+5. Viewed metrics: **CloudWatch → Metrics → CloudFront**
 
 ---
 
@@ -246,12 +246,12 @@ The project files were manually uploaded to the GitHub repository **concordgrp2*
 
 - [ ] `index.html`, `style.css`, `game.js` — game files uploaded to S3
 - [ ] GitHub repository (public, with README)
-- [ ] Live HTTPS URL (`https://d1234abc.cloudfront.net`)
+- [ ] Live HTTPS URL (https://dscevtv8kkn9d.cloudfront.net/)
 - [ ] Architecture diagram (S3 → CloudFront → CloudWatch)
 - [ ] Screenshot: game working in browser with `https://` in URL bar
 - [ ] Screenshot: CloudWatch metrics/logs dashboard
 - [ ] Testing summary (short written paragraph)
-- [ ] Recommendations document (1–2 pages on security/performance/cost/future)
+- [ ] Project documentation (1–2 pages on security/performance/cost/future)
 
 ---
 
